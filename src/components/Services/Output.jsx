@@ -49,7 +49,9 @@ const Output = ({ foodProperty, imgSrc }) => {
   return (
     <div className="output">
       <h1 className="output-heading">Food Details</h1>
-      {imgSrc && (
+
+    <div className="output-div">
+    {imgSrc && (
         <div>
           <img src={imgSrc} alt="Captured food" className="output-image" />
         </div>
@@ -63,8 +65,12 @@ const Output = ({ foodProperty, imgSrc }) => {
         <p className="output-data">Vitamins: {foodProperty[0].vitamins}</p>
       </div>
       <div className="chart-container">
-        <Pie data={chartData} options={chartOptions} />
+        <Pie className="chart-text" data={chartData} options={chartOptions} />
       </div>
+    </div>
+
+
+      
     </div>
   );
 };

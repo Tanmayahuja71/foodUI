@@ -23,7 +23,7 @@ const ContactUs = () => {
 
 
         axios.post('http://localhost:5000/api/contactus',jsonData).then(res=>{
-            alert('mail send successfully')
+            alert('Mail Send Successfully')
         })
         .catch(err=>{
             alert('Enter correct mail id')
